@@ -4,6 +4,7 @@ use Fpdf\Fpdf;
 // use Tabla\Tabla;
 // use Complementos\Tabla;
 require 'mc_table.php';
+require 'Complementos_fpdf.php';
 class Pdf extends Tabla
 {
 	public function __construct()
@@ -25,6 +26,7 @@ class Pdf extends Tabla
 		$pdf = new Tabla();
 		$this->SetFillColor(0,92,169,255);
 		$this->AddPage();
+		$this->SetDrawColor(255,255,255);
 		$this->SetFont('Times', 'B', 35);
 		$this->SetY(15);
 		$this->Cell(45,10, 'L Titulo', 0);
@@ -52,24 +54,42 @@ class Pdf extends Tabla
 			'b',
 			'c'
 		]);
-		$this->Rect(10, 54, 190, .8, 'F');
+		$this->SetDrawColor(0,92,169,255);
+		$this->SetLineWidth(.8);
+		$this->Line(10, 50, 200, 50);
 		$this->Ln(10);
+		$this->SetDrawColor(255,255,255);
 		$this->SetWidths([36, 150]);
 		$this->SetAligns(['L', 'L']);
 		$this->Row([
 			'a',
 			'b'
 		]);
-		$this->Rect(10, 62, 190, .8, 'F');
-		$this->Ln(15);
-		$this->SetWidths([63, 63, 63]);
+		$y = $this->GetY();
+		$this->SetDrawColor(0,92,169,255);
+		$this->SetLineWidth(.8);
+		$this->Line(10, $y, 200, $y);
+		$this->Ln(7);
+		$this->SetDrawColor(255,255,255);
+		$this->SetWidths([26.5, 26.5, 26.5, 26.5, 26.5, 26.5, 26.5]);
 		$this->SetAligns(['L', 'L']);
 		$this->Row([
 			'a',
 			'b',
-			'c'
+			'c',
+			'd',
+			'e',
+			'f',
+			'g'
 		]);
+		$z= $y+$this->GetY();
+		$this->SetDrawColor(0,92,169,255);
+		$this->SetLineWidth(.8);
+		$this->Line(10, $z, 200, $z);
 
+		$this->SetDrawColor(0,92,169,255);
+		$this->SetLineWidth(.8);
+		$this->Line(10, $z+10, 200, $z+10);
 
 
 

@@ -1,5 +1,6 @@
 <?php
-class Complementos_fpdf extends FPDF
+use Fpdf\Fpdf;
+class Complementos extends FPDF
 {
 	public function __construct()
 	{
