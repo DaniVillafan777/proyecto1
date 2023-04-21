@@ -56,7 +56,7 @@ class Pdf extends Tabla
 		]);
 		$this->SetDrawColor(0,92,169,255);
 		$this->SetLineWidth(.8);
-		$this->Line(10, 50, 200, 50);
+		$this->Line(10, 55, 200, 55);
 		$this->Ln(10);
 		$this->SetDrawColor(255,255,255);
 		$this->SetWidths([36, 150]);
@@ -74,6 +74,54 @@ class Pdf extends Tabla
 		$this->SetWidths([26.5, 26.5, 26.5, 26.5, 26.5, 26.5, 26.5]);
 		$this->SetAligns(['L', 'L']);
 		$this->Row([
+			'1',
+			'b',
+			'c',
+			'd',
+			'e',
+			'f',
+			'g'
+		]);
+		$this->Row([
+			'2',
+			'b',
+			'c',
+			'd',
+			'e',
+			'f',
+			'g'
+		]);
+		$this->Row([
+			'3',
+			'b',
+			'c',
+			'd',
+			'e',
+			'f',
+			'g'
+		]);
+		$this->Row([
+			'4',
+			'b',
+			'c',
+			'd',
+			'e',
+			'f',
+			'g'
+		]);
+		$z=5+$this->GetY();
+		$this->SetDrawColor(0,92,169,255);
+		$this->SetLineWidth(.8);
+		$this->Line(10, $z, 200, $z);
+
+		$this->SetDrawColor(0,92,169,255);
+		$this->SetLineWidth(.8);
+		$this->Line(10, $z+10, 200, $z+10);
+		$this->Ln(20);
+		$this->SetDrawColor(255,255,255);
+		$this->SetWidths([26.5, 26.5, 26.5, 26.5, 26.5, 26.5, 26.5]);
+		$this->SetAligns(['L', 'L']);
+		$this->Row([
 			'a',
 			'b',
 			'c',
@@ -82,15 +130,6 @@ class Pdf extends Tabla
 			'f',
 			'g'
 		]);
-		$z= $y+$this->GetY();
-		$this->SetDrawColor(0,92,169,255);
-		$this->SetLineWidth(.8);
-		$this->Line(10, $z, 200, $z);
-
-		$this->SetDrawColor(0,92,169,255);
-		$this->SetLineWidth(.8);
-		$this->Line(10, $z+10, 200, $z+10);
-
 
 
 
