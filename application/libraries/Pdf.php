@@ -74,22 +74,21 @@ class Pdf extends Tabla
 		$this->SetWidths([26.5, 26.5, 26.5, 26.5, 26.5, 26.5, 26.5]);
 		$this->SetAligns(['L', 'L']);
 		$this->Row([
-			'1',
-			'b',
-			'c',
-			'd',
-			'e',
-			'f',
-			'g'
+			'11111111',
+			'bbbbbbbb',
+			'cccccccc',
+			'dddddddd',
+			'eeeeeeee',
+			'ffffffff',
+			'gggggggg'
 		]);
 		$this->Row([
-			'2',
-			'b',
-			'c',
-			'd',
-			'e',
-			'f',
-			'g'
+			'2222222',
+			'ccccccc',
+			'ddddddd',
+			'eeeeeee',
+			'fffffff',
+			'ggggggg'
 		]);
 		$this->Row([
 			'3',

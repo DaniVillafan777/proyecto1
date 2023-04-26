@@ -38,7 +38,9 @@ class Tabla extends Fpdf
 			$x = $this->GetX();
 			$y = $this->GetY();
 			// Draw the border
-			$this->Rect($x,$y,$w,$h);
+			$this->Rect($x,$y,$w,$h, 'F');
+			// Draw color
+			$this->SetFillColor(0,92,150,255);
 			// Print the text
 			$this->MultiCell($w,5,$data[$i],0,$a);
 			// Put the position to the right of the cell
