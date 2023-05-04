@@ -33,7 +33,7 @@ class Tabla extends Fpdf
 		for($i=0;$i<count($data);$i++)
 		{
 			$w = $this->widths[$i];
-			$a = isset($this->aligns[$i]) ? $this->aligns[$i] : 'L';
+			$a = isset($this->aligns[$i]) ? $this->aligns[$i] : 'M';
 			// Save the current position
 			$x = $this->GetX();
 			$y = $this->GetY();

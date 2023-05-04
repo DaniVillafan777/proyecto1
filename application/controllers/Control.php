@@ -12,6 +12,10 @@ class Control extends CI_Controller {
 	public function index()
 	{
 		$this->load->library('pdf');
+		$this->load->model('modelo1');
+		// $db = $this->load->database('default', TRUE);
+		// return var_dump($db->get('users')->result_array());
+		// return $this->modelo1->consultar();
 		$this->pdf->index();
 	}
 	public function hola($txt)
