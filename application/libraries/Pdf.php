@@ -51,9 +51,9 @@ class Pdf extends Tabla
 		$this->SetWidths([36, 45, 60]);
 		$this->SetAligns(['C', 'C', 'C']);
 		$this->Row([
-			'Fecha',
+			'id',
 			'Nombre',
-			'Firma'
+			'Correo'
 		]);
 		$ci = &get_instance();
 		$ci->load->model('modelo1');
